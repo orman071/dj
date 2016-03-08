@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^login/$', test),
     url(r'^sigup/$', test),
     url(r'^question/\d+/$', test),
-    url(r'^ask/$', test),
+    url(r'^ask/', test),
     url(r'^popular/$', test),
     url(r'^new/$', test),
 )
