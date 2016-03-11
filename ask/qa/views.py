@@ -7,7 +7,7 @@ from qa.models import Question, Answer
 def test(request):
     post = Question.objects.all()
     post.order_by('-id')
-    limit = request.GET.get('limit', 10)
+    limit = request.GET.get('limit', 1)
     page = request.GET.get('page', 1)
     paginator = Paginator(post, limit)
     page = paginator.page(page)
@@ -15,7 +15,8 @@ def test(request):
 
 
 def popular(request):
-    pop = Question.objects.all().filter('-rating')
+    pop = Question.objects.all()
+    pop.order_by('-rating')
     limit = request.GET.get('limit', 10)
     page = request.GET.get('page', 1)
     paginator = Paginator(pop, limit)
@@ -23,7 +24,7 @@ def popular(request):
     return render(request, 'post.html', {'post': pop, 'paginator': paginator, 'page': page})
 
 
-def question(request, id):
+def question(request, post_id):
     qu = get_object_or_404(Question, pk=id)
     an = Answer.objects.all()
     return render(request, 'question.html', {'qu': qu, 'an': an})
