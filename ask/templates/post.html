@@ -5,24 +5,37 @@
     <title>Title</title>
 </head>
 <body>
-{% for p in post %}
+{% for p in contacts %}
 {{ p.title }}
+    {{ p.text }}
 {% endfor %}
 
-{% for i in paginator.page_range %}
-  {% if i.number == page.number %}
-    <li class="active"></li>
-      <a href="?page={{ page }}">{{ page }}</a>
-        {% else %}
-    <li></li>
-  {% endif %}
-{% endfor %}
-  {% if paginator.has_previous %}
-<a href="?page={{ paginator.previous_page_number }}">Prev</a>
-{% endif %}
-{% if paginator.has_next %}
-<a href="?page={{ paginator.next_page_number }}">Next</a>
-{% endif %}
+<nav class="col full pagination">
+            <ul>
+  			      <li>
+                  {% if contacts.has_previous %}
+                  <li><span class="page-numbers prev">
+                      <a href="?page={{ contacts.previous_page_number }}">Prev</a>
+                      </span>
+                     </li>
+                  {% endif %}
+
+
+                      {% for page in contacts.paginator.page_range %}
+                          <li class="{% if contacts.number == page %} current {% endif %}"><a href="?page={{ page }}" class="page-numbers current">{{ page }}</a></li>
+                              <li></li>
+
+
+
+                      {% endfor %}
+
+
+                      {% if contacts.has_next %}
+  				      <li><a href="?page={{ contacts.next_page_number }}" class="page-numbers next">Next</a></li>
+                      {% endif %}
+  			      </ul>
+  		      </nav>
+
 
 
 </body>

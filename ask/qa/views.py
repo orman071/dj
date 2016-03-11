@@ -6,7 +6,7 @@ from qa.models import Question, Answer
 
 def test(request):
     post = Question.objects.all()
-    post.order_by('-id')
+
     paginator = Paginator(post, 1)
     page = request.GET.get('page')
     try:
@@ -15,7 +15,7 @@ def test(request):
         contacts = paginator.page(1)
     except EmptyPage:
         contacts = paginator.page(paginator.num_pages)
-    return render(request, 'post.html', {'post': post, 'paginator': contacts, 'page': page})
+    return render(request, 'post.html', {'post': post, 'contacts': contacts, 'page': page})
 
 
 def popular(request):
