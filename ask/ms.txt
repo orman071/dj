@@ -1,0 +1,10 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dj_db',
+        'USER': 'john',
+        'PASSWORD': 'pass',
+        'HOST': '',
+        'PORT': '',
+    }
+}
