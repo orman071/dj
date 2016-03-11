@@ -9,11 +9,17 @@ class Question(models.Model):
     author = models.ForeignKey(User, related_name='+')
     likes = models.ManyToManyField(User, related_name='+')
 
+    def __unicode__(self):
+        return self.text
+
 
 class Answer(models.Model):
     text = models.TextField()
     added_at = models.DateTimeField(auto_now_add=True)
     question = models.ForeignKey(Question)
     author = models.ForeignKey(User)
+
+    def __unicode__(self):
+        return self.text
 
 # Create your models here.

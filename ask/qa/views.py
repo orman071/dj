@@ -33,5 +33,5 @@ def popular(request):
 
 def question(request, post_id):
     qu = get_object_or_404(Question, pk=post_id)
-    an = Answer.objects.all()
+    an = Answer.objects.filter(question__answer=True)
     return render(request, 'question.html', {'qu': qu, 'an': an})
