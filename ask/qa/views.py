@@ -5,7 +5,7 @@ from qa.models import Question, Answer
 
 
 def test(request):
-    post = Question.objects.all()
+    post = Question.objects.all().order_by('-added_at')
 
     paginator = Paginator(post, 1)
     page = request.GET.get('page')
