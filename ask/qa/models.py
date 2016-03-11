@@ -5,9 +5,9 @@ class Question(models.Model):
     title = models.CharField(max_length=254)
     text = models.TextField()
     added_at = models.DateTimeField(blank=True)
-    rating = models.IntegerField()
-    author = models.ForeignKey(User)
-    likes = models.ManyToManyField(User)
+    rating = models.IntegerField(blank=True, null=True)
+    author = models.ForeignKey(User, related_name='+')
+    likes = models.ManyToManyField(User, related_name='+')
 
 
 class Answer(models.Model):
