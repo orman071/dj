@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from qa.models import Question, Answer
 
 
-def test(request, pk):
+def test(request):
     post = Question.objects.all()
     post.order_by('-id')
     limit = request.GET.get('limit', 10)
