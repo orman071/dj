@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for p in post %}
+{{ p.title }}
+{% endfor %}
+
+{% for i in paginator.page_range %}
+  {% if i.number == page.number %}
+    <li class="active"></li>
+      <a href="?page={{ page }}">{{ page }}</a>
+        {% else %}
+    <li></li>
+  {% endif %}
+{% endfor %}
+  {% if page.has_previous %}
+<a href="?page={{ page.previous_page_number }}">Prev</a>
+{% endif %}
+{% if page.has_next %}
+<a href="?page={{ page.next_page_number }}">Next</a>
+{% endif %}
+
+
+</body>
+</html>
