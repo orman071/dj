@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ask/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.40439934">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ask/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55837566">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
@@ -129,10 +129,10 @@
         <option value="$PROJECT_DIR$/templates/popular.html" />
         <option value="$PROJECT_DIR$/templates/question.html" />
         <option value="$PROJECT_DIR$/qa/models.py" />
-        <option value="$PROJECT_DIR$/ask/settings.py" />
         <option value="$PROJECT_DIR$/qa/admin.py" />
         <option value="$PROJECT_DIR$/qa/views.py" />
         <option value="$PROJECT_DIR$/ask/urls.py" />
+        <option value="$PROJECT_DIR$/ask/settings.py" />
       </list>
     </option>
   </component>
@@ -503,7 +503,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -763,14 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ask/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qa/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -793,11 +785,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ask/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55837566">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ask/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40439934">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
