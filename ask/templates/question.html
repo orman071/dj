@@ -7,11 +7,10 @@
 <body>
 {{ qu.title }}<br>
 {{ qu.text }}<br>
-{% for a in an %}
-{% for i in a.answer_set.all %}
-    {{ i.text }}
+
+{% for i in an.answer_set.all %}
+    {{ i }}
     {% endfor %}
-{% endfor %}
 
 
 {{ an }}
