@@ -7,6 +7,12 @@
 <body>
 {{ qu.title }}<br>
 {{ qu.text }}<br>
+{% for a in an %}
+{% for i in a.answer_set.all %}
+    {{ i.text }}
+    {% endfor %}
+{% endfor %}
+
 
 {{ an }}
 </body>

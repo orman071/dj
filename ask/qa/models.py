@@ -9,6 +9,7 @@ class Question(models.Model):
     author = models.ForeignKey(User, related_name='+')
     likes = models.ManyToManyField(User, related_name='+')
 
+
     def __unicode__(self):
         return self.text
 

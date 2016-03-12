@@ -21,7 +21,7 @@ def test(request):
 def popular(request):
     post = Question.objects.all().order_by('-rating')
 
-    paginator = Paginator(post, 1)
+    paginator = Paginator(post, 10)
     page = request.GET.get('page')
     try:
         contacts = paginator.page(page)
@@ -33,5 +33,6 @@ def popular(request):
 
 def question(request, post_id):
     qu = get_object_or_404(Question, pk=post_id)
-    an = Answer.objects.filter(question__answer=True)
+    an = Question.objects.all()
+
     return render(request, 'question.html', {'qu': qu, 'an': an})
