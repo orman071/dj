@@ -8,11 +8,14 @@
 {{ qu.title }}<br>
 {{ qu.text }}<br>
 
-{% for i in an.answer_set.all %}
-    {{ i }}
+{% for i in an %}
+    {% for a in i.answer_set.all %}
+    {{ a }}
     {% endfor %}
+{% endfor %}
+
+<p>answer </p>
 
 
-{{ an }}
 </body>
 </html>
